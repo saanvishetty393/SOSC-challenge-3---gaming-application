@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h4>🕹 GAME HUB</h4>
+
+<div class="all-btn">
+
+  <div class="tic-tac-toe">
+    <button class="game-btn ttt-btn" onclick="openGame('tictactoe.html')">
+      Tic Tac Toe
+    </button>
+  </div>
+
+  <button class="rock-btn ttr-btn" onclick="openGame('rps.html')">
+    Rock Paper Scissors
+  </button>
+
+  <button class="other-btn tto-btn" onclick="addGame()">
+    ➕ Add More Games
+  </button>
+
+</div>
+
+<div class="container">
+  <button onclick="logout()">Logout</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+
+<script>
+function openGame(page) {
+  window.location.href = page;
+}
+
+function addGame() {
+  alert("More games coming soon!");
+}
+</script>
+<script>
+  async function logout() {
+    const { error } = await supabaseClient.auth.signOut()
+
+    if (error) {
+      console.error(error.message)
+      alert("Logout failed")
+    } else {
+      window.location.href = "index.html"
+    }
+}
+</script>
+</script>
+
+</body>
+</html>
+
+

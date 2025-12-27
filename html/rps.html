@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="game.css"/>
+  
+
+</head>
+<body>
+    <button id="backBtn" onclick="goBack()">Back</button>
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+        <div class="choice" id="rock"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71Bm7oOk6t3kVeT8TLPMhqwe1fTMQ-Eropw&s"/>
+        </div>
+    <div class="choice" id="paper"><img src="https://cbx-prod.b-cdn.net/COLOURBOX8093018.jpg?width=800&height=800&quality=70"/>
+    </div>
+    <div class="choice" id="scissors"><img src="	https://cbx-prod.b-cdn.net/COLOURBOX8093027.jpg?width=800&height=800&quality=70"/>
+    </div>
+    </div>
+    <div class="score-board">
+  <div class="score">
+    <p id="user-score">0</p>
+    <span>Player</span>
+  </div>
+
+  <div class="score">
+    <p id="comp-score">0</p>
+    <span>Computer</span>
+  </div>
+</div>
+
+    <div class="message-container"><button id="msg">play your move</button></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="game.js"></script>
+   <script>
+function goBack() {
+  window.location.href = "dashboard.html";
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Game App - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🎮 GAMEERA</h2>
+<h3>"A HOME FOR YOUR GAMES!"</h3>
+<div class="btn-container">
+<input type="text" id="username" placeholder="Username">
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+<button onclick="signUp()">Sign Up</button>
+<button onclick="login()">Login</button>
+</div>
+<p id="msg"></p>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
+
